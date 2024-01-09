@@ -49,7 +49,8 @@ def test_false_negative():
 
 
 def test_total():
-    true_positive = ctf.calculate_true_positive(cat_detected, with_cat)
+    all_data = {"cat_detected": cat_detected, "with_cat": with_cat}
+    true_positive = ctf.zz_calculate_true_positive(all_data)
     true_negative = ctf.calculate_true_negative(cat_not_detected, without_cat)
     false_positive = ctf.calculate_false_positive(cat_detected, with_cat)
     false_negative = ctf.calculate_false_negative(cat_not_detected, without_cat)
