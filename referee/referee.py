@@ -4,10 +4,10 @@ def add_offset(augend: int, addend: int) -> int:
 
 def calculate_true_positive(cat_detected, with_cat):
     all_data = {"cat_detected": cat_detected}
-    return zz_calculate_true_positive(cat_detected, with_cat, all_data)
+    return zz_calculate_true_positive(with_cat, all_data)
 
 
-def zz_calculate_true_positive(cat_detected, with_cat, all_data):
+def zz_calculate_true_positive(with_cat, all_data):
     cat_detected = all_data["cat_detected"]
     return cat_detected & with_cat
 
