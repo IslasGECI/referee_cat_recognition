@@ -3,6 +3,7 @@ def add_offset(augend: int, addend: int) -> int:
 
 
 def xxcalculate_true_positive(cat_detected, with_cat, all_data):
+    cat_detected = all_data["cat_detected"]
     return calculate_true_positive(cat_detected, with_cat)
 
 
