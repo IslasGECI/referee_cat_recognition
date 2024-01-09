@@ -22,7 +22,8 @@ def test_true_positive():
     obtained_true_positive = ctf.zz_calculate_true_positive(all_data)
     assert obtained_true_positive == expected_true_positive
     expected_true_positive = {"e", "f"}
-    obtained_true_positive = ctf.calculate_true_positive(cat_detected, without_cat)
+    all_data = {"cat_detected": cat_detected, "with_cat": without_cat}
+    obtained_true_positive = ctf.zz_calculate_true_positive(all_data)
     assert obtained_true_positive == expected_true_positive
 
 
