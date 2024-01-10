@@ -21,7 +21,7 @@ def test_true_positive():
 def test_true_negative():
     expected_true_negative = {"i", "g", "h"}
     all_data = {"cat_not_detected": cat_not_detected, "without_cat": without_cat}
-    obtained_true_negative = ctf.xxcalculate_true_negative(all_data)
+    obtained_true_negative = ctf.calculate_true_negative(all_data)
     assert obtained_true_negative == expected_true_negative
 
 
@@ -44,7 +44,7 @@ def test_total():
     all_data = {"cat_detected": cat_detected, "with_cat": with_cat}
     true_positive = ctf.calculate_true_positive(all_data)
     all_data = {"cat_not_detected": cat_not_detected, "without_cat": without_cat}
-    true_negative = ctf.xxcalculate_true_negative(all_data)
+    true_negative = ctf.calculate_true_negative(all_data)
     false_positive = ctf.calculate_false_positive(cat_detected, with_cat)
     false_negative = ctf.calculate_false_negative(cat_not_detected, without_cat)
     expected_total = 9
