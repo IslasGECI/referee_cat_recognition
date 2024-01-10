@@ -5,7 +5,7 @@ def calculate_true_positive(all_data):
 
 
 def calculate_true_negative(cat_not_detected, without_cat):
-    return cat_not_detected & without_cat
+    return xxcalculate_true_negative(cat_not_detected, without_cat)
 
 
 def xxcalculate_true_negative(cat_not_detected, without_cat):
