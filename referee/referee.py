@@ -10,10 +10,10 @@ def calculate_true_negative(all_data):
 
 def calculate_false_positive(cat_detected, with_cat):
     all_data = {"cat_detected": cat_detected, "with_cat": with_cat}
-    return xxcalculate_false_positive(all_data, with_cat)
+    return xxcalculate_false_positive(all_data)
 
 
-def xxcalculate_false_positive(all_data, with_cat):
+def xxcalculate_false_positive(all_data):
     return all_data["cat_detected"] - all_data["with_cat"]
 
 
