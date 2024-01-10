@@ -1,7 +1,3 @@
-def add_offset(augend: int, addend: int) -> int:
-    return augend + addend
-
-
 def calculate_true_positive(all_data):
     cat_detected = all_data["cat_detected"]
     with_cat = all_data["with_cat"]

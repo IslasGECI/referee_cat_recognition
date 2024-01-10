@@ -1,14 +1,5 @@
 import referee as ctf
 
-
-def test_add_offset():
-    augend = 1
-    addend = 2
-    expected = augend + addend
-    obtained = ctf.add_offset(augend, addend)
-    assert expected == obtained
-
-
 with_cat = {"a", "b", "c", "d"}
 without_cat = {"e", "f", "g", "h", "i"}
 cat_detected = {"a", "b", "e", "f"}
