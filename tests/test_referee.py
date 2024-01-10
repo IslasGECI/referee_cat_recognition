@@ -31,7 +31,8 @@ def test_false_positive():
     obtained_false_positive = ctf.xxcalculate_false_positive(all_data)
     assert obtained_false_positive == expected_false_positive
     expected_false_positive = {"a", "b"}
-    obtained_false_positive = ctf.calculate_false_positive(cat_detected, without_cat)
+    all_data = {"cat_detected": cat_detected, "with_cat": without_cat}
+    obtained_false_positive = ctf.xxcalculate_false_positive(all_data)
     assert obtained_false_positive == expected_false_positive
 
 
