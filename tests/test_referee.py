@@ -20,7 +20,8 @@ def test_true_positive():
 
 def test_true_negative():
     expected_true_negative = {"i", "g", "h"}
-    obtained_true_negative = ctf.calculate_true_negative(cat_not_detected, without_cat)
+    all_data = {"cat_not_detected": cat_not_detected, "without_cat": without_cat}
+    obtained_true_negative = ctf.xxcalculate_true_negative(all_data)
     assert obtained_true_negative == expected_true_negative
 
 
