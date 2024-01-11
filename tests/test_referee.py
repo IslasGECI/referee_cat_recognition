@@ -4,7 +4,7 @@ with_cat = {"a", "b", "c", "d"}
 without_cat = {"e", "f", "g", "h", "i"}
 cat_detected = {"a", "b", "e", "f"}
 cat_not_detected = {"c", "d", "g", "h", "i"}
-total = {"a", "b", "c", "d", "e", "f", "g", "h", "i"}
+all = {"a", "b", "c", "d", "e", "f", "g", "h", "i"}
 
 all_data = {
     "cat_detected": cat_detected,
@@ -39,8 +39,8 @@ def test_false_negative():
 
 
 def test_accuracy():
-    total_classifications = 9
+    all_classifications = 9
     correct_classifications = 5
-    expected_accuracy = correct_classifications / total_classifications
+    expected_accuracy = correct_classifications / all_classifications
     obtained_accuracy = ctf.calculate_accuracy(all_data)
     assert obtained_accuracy == expected_accuracy
