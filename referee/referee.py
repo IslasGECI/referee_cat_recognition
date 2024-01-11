@@ -31,5 +31,5 @@ def xxcalculate_total(all_data, false_negative):
         all_data["true_positive"]
         | all_data["true_negative"]
         | all_data["false_positive"]
-        | false_negative
+        | all_data["false_negative"]
     )
