@@ -21,12 +21,7 @@ def calculate_total(all_data):
     true_negative = calculate_true_negative(all_data)
     false_positive = calculate_false_positive(all_data)
     false_negative = calculate_false_negative(all_data)
-    binary_classification = {
-        "true_positive": true_positive,
-        "true_negative": true_negative,
-        "false_positive": false_positive,
-        "false_negative": false_negative,
-    }
+    binary_classification = _classify(all_data)
     return len(
         binary_classification["true_positive"]
         | binary_classification["true_negative"]
@@ -40,7 +35,7 @@ def _classify(all_data):
     true_negative = calculate_true_negative(all_data)
     false_positive = calculate_false_positive(all_data)
     false_negative = calculate_false_negative(all_data)
-    binary_classification = {
+    return {
         "true_positive": true_positive,
         "true_negative": true_negative,
         "false_positive": false_positive,
