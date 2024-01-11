@@ -16,6 +16,18 @@ def calculate_false_negative(all_data):
     return all_data["cat_not_detected"] - all_data["without_cat"]
 
 
+def calculate_accuracy(all_data):
+    all_classifications = _calculate_all_classifications(all_data)
+    correct_classifications = _calculate_correct_classifications(all_data)
+    return correct_classifications / all_classifications
+
+
+def calculate_sensibility(all_data):
+    all_classifications = _calculate_all_classifications(all_data)
+    correct_classifications = _calculate_correct_classifications(all_data)
+    return correct_classifications / all_classifications
+
+
 def _calculate_all_classifications(all_data):
     binary_classification = _classify(all_data)
     return len(
@@ -24,6 +36,11 @@ def _calculate_all_classifications(all_data):
         | binary_classification["false_positive"]
         | binary_classification["false_negative"]
     )
+
+
+def _calculate_correct_classifications(all_data):
+    binary_classification = _classify(all_data)
+    return len(binary_classification["true_positive"] | binary_classification["true_negative"])
 
 
 def _classify(all_data):
@@ -37,20 +54,3 @@ def _classify(all_data):
         "false_positive": false_positive,
         "false_negative": false_negative,
     }
-
-
-def calculate_accuracy(all_data):
-    all_classifications = _calculate_all_classifications(all_data)
-    correct_classifications = _calculate_correct_classifications(all_data)
-    return correct_classifications / all_classifications
-
-
-def _calculate_correct_classifications(all_data):
-    binary_classification = _classify(all_data)
-    return len(binary_classification["true_positive"] | binary_classification["true_negative"])
-
-
-def calculate_sensibility(all_data):
-    all_classifications = _calculate_all_classifications(all_data)
-    correct_classifications = _calculate_correct_classifications(all_data)
-    return correct_classifications / all_classifications
