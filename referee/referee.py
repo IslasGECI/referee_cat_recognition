@@ -40,6 +40,9 @@ def _classify(all_data):
 
 
 def calculate_accuracy(all_data):
-    total_classifications = 9
-    correct_classifications = 5
+    total_classifications = calculate_total(all_data)
+    binary_classification = _classify(all_data)
+    correct_classifications = len(
+        binary_classification["true_positive"] | binary_classification["true_negative"]
+    )
     return correct_classifications / total_classifications
