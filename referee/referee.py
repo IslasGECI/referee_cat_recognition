@@ -37,8 +37,9 @@ def calculate_specificity(all_data):
 
 
 def calculate_average_true_rate(all_data):
-    average_true_rate = (calculate_specificity(all_data) + calculate_sensibility(all_data)) / 2
-    return average_true_rate
+    specificity = calculate_specificity(all_data)
+    sensibility = calculate_sensibility(all_data)
+    return (specificity + sensibility) / 2
 
 
 def _calculate_all_classifications(all_data):
