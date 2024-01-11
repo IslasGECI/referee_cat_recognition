@@ -17,10 +17,6 @@ def calculate_false_negative(all_data):
 
 
 def calculate_total(all_data):
-    true_positive = calculate_true_positive(all_data)
-    true_negative = calculate_true_negative(all_data)
-    false_positive = calculate_false_positive(all_data)
-    false_negative = calculate_false_negative(all_data)
     binary_classification = _classify(all_data)
     return len(
         binary_classification["true_positive"]
