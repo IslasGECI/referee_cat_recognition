@@ -16,16 +16,6 @@ def calculate_false_negative(all_data):
     return all_data["cat_not_detected"] - all_data["without_cat"]
 
 
-def calculate_total(true_positive, true_negative, false_positive, false_negative):
-    all_data = {
-        "true_positive": true_positive,
-        "true_negative": true_negative,
-        "false_positive": false_positive,
-        "false_negative": false_negative,
-    }
-    return xxcalculate_total(all_data)
-
-
 def xxcalculate_total(all_data):
     return len(
         all_data["true_positive"]
