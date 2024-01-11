@@ -46,16 +46,6 @@ def test_total():
         "with_cat": with_cat,
         "without_cat": without_cat,
     }
-    true_positive = ctf.calculate_true_positive(all_data)
-    true_negative = ctf.calculate_true_negative(all_data)
-    false_positive = ctf.calculate_false_positive(all_data)
-    false_negative = ctf.calculate_false_negative(all_data)
     expected_total = 9
-    all_data = {
-        "true_positive": true_positive,
-        "true_negative": true_negative,
-        "false_positive": false_positive,
-        "false_negative": false_negative,
-    }
     obtained_total = ctf.calculate_total(all_data)
     assert obtained_total == expected_total
