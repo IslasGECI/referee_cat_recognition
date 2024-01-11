@@ -59,7 +59,5 @@ def test_total():
         "false_positive": false_positive,
         "false_negative": false_negative,
     }
-    obtained_total = ctf.calculate_total(
-        true_positive, true_negative, false_positive, false_negative
-    )
+    obtained_total = ctf.xxcalculate_total(all_data)
     assert obtained_total == expected_total
