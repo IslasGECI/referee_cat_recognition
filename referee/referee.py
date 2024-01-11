@@ -46,3 +46,8 @@ def calculate_accuracy(all_data):
         binary_classification["true_positive"] | binary_classification["true_negative"]
     )
     return correct_classifications / total_classifications
+
+
+def _calculate_correct_classifications(all_data):
+    binary_classification = _classify(all_data)
+    return len(binary_classification["true_positive"] | binary_classification["true_negative"])
