@@ -45,6 +45,8 @@ def test_total():
 
 
 def test_accuracy():
-    expected_accuracy = 5 / 9
+    total_classifications = 9
+    correct_classifications = 5
+    expected_accuracy = correct_classifications / total_classifications
     obtained_accuracy = ctf.calculate_accuracy(all_data)
     assert obtained_accuracy == expected_accuracy
