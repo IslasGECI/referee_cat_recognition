@@ -31,8 +31,8 @@ def calculate_sensibility(all_data):
 
 def calculate_specificity(all_data):
     binary_classification = _classify(all_data)
-    number_of_true_negatives = len(binary_classification["true_positive"])
-    number_of_without_cat = len(all_data["with_cat"])
+    number_of_true_negatives = len(binary_classification["true_negative"])
+    number_of_without_cat = len(all_data["without_cat"])
     return number_of_true_negatives / number_of_without_cat
 
 
