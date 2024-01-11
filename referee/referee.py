@@ -18,7 +18,7 @@ def calculate_false_negative(cat_not_detected, without_cat):
 
 
 def xxcalculate_false_negative(all_data, without_cat):
-    return all_data["cat_not_detected"] - without_cat
+    return all_data["cat_not_detected"] - all_data["without_cat"]
 
 
 def calculate_total(true_positive, true_negative, false_positive, false_negative):
