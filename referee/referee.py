@@ -40,9 +40,9 @@ def _classify(all_data):
 
 
 def calculate_accuracy(all_data):
-    total_classifications = _calculate_all_classifications(all_data)
+    all_classifications = _calculate_all_classifications(all_data)
     correct_classifications = _calculate_correct_classifications(all_data)
-    return correct_classifications / total_classifications
+    return correct_classifications / all_classifications
 
 
 def _calculate_correct_classifications(all_data):
