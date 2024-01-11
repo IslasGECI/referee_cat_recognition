@@ -40,6 +40,6 @@ def _classify(all_data):
 
 
 def calculate_accuracy(all_data):
-    total = 9
-    correct = 5
-    return correct / total
+    total_classifications = 9
+    correct_classifications = 5
+    return correct_classifications / total_classifications
