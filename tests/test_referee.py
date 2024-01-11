@@ -47,9 +47,7 @@ def test_accuracy():
 
 
 def test_sensibility():
-    number_of_true_positives = 2
-    number_of_with_cat = 4
-    expected_sensibility = number_of_true_positives / number_of_with_cat
+    expected_sensibility = 0.5
     obtained_sensibility = ctf.calculate_sensibility(all_data)
     assert obtained_sensibility == expected_sensibility
 
