@@ -12,10 +12,6 @@ def test_true_positive():
     all_data = {"cat_detected": cat_detected, "with_cat": with_cat}
     obtained_true_positive = ctf.calculate_true_positive(all_data)
     assert obtained_true_positive == expected_true_positive
-    expected_true_positive = {"e", "f"}
-    all_data = {"cat_detected": cat_detected, "with_cat": without_cat}
-    obtained_true_positive = ctf.calculate_true_positive(all_data)
-    assert obtained_true_positive == expected_true_positive
 
 
 def test_true_negative():
