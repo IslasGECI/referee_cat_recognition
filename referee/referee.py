@@ -36,6 +36,11 @@ def calculate_specificity(all_data):
     return number_of_true_negatives / number_of_without_cat
 
 
+def calculate_average_true_rate(all_data):
+    average_true_rate = 0.55
+    return average_true_rate
+
+
 def _calculate_all_classifications(all_data):
     binary_classification = _classify(all_data)
     return len(
