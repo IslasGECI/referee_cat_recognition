@@ -53,8 +53,8 @@ def test_sensibility():
 
 
 def test_specificity():
-    number_of_true_negatives = 2
-    number_of_without_cat = 4
+    number_of_true_negatives = 3
+    number_of_without_cat = 5
     expected_specificity = number_of_true_negatives / number_of_without_cat
     obtained_specificity = ctf.calculate_specificity(all_data)
     assert obtained_specificity == expected_specificity
