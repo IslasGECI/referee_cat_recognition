@@ -27,4 +27,6 @@ def calculate_total(true_positive, true_negative, false_positive, false_negative
 
 
 def xxcalculate_total(all_data, true_negative, false_positive, false_negative):
-    return len(all_data["true_positive"] | true_negative | false_positive | false_negative)
+    return len(
+        all_data["true_positive"] | all_data["true_negative"] | false_positive | false_negative
+    )
