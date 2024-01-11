@@ -42,3 +42,9 @@ def test_total():
     expected_total = 9
     obtained_total = ctf.calculate_total(all_data)
     assert obtained_total == expected_total
+
+
+def test_accuracy():
+    expected_accuracy = 5 / 9
+    obtained_accuracy = ctf.calculate_accuracy(all_data)
+    assert obtained_accuracy == expected_accuracy
