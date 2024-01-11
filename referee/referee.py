@@ -13,6 +13,10 @@ def calculate_false_positive(all_data):
 
 
 def calculate_false_negative(cat_not_detected, without_cat):
+    return xxcalculate_false_negative(cat_not_detected, without_cat)
+
+
+def xxcalculate_false_negative(cat_not_detected, without_cat):
     return cat_not_detected - without_cat
 
 
