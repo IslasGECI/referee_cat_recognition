@@ -56,3 +56,9 @@ def test_specificity():
     expected_specificity = 0.6
     obtained_specificity = ctf.calculate_specificity(all_data)
     assert obtained_specificity == expected_specificity
+
+
+def test_average_true_rate():
+    expected_average_true_rate = 0.55
+    obtained_average_true_rate = ctf.calculate_average_true_rate(all_data)
+    assert obtained_average_true_rate == expected_average_true_rate
