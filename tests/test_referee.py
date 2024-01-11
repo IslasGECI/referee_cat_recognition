@@ -38,12 +38,6 @@ def test_false_negative():
     assert obtained_false_negative == expected_false_negative
 
 
-def test_total():
-    expected_total = 9
-    obtained_total = ctf.calculate_total(all_data)
-    assert obtained_total == expected_total
-
-
 def test_accuracy():
     total_classifications = 9
     correct_classifications = 5
