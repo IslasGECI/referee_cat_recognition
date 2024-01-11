@@ -44,3 +44,11 @@ def test_accuracy():
     expected_accuracy = correct_classifications / all_classifications
     obtained_accuracy = ctf.calculate_accuracy(all_data)
     assert obtained_accuracy == expected_accuracy
+
+
+def test_sensibility():
+    all_classifications = 9
+    correct_classifications = 5
+    expected_accuracy = correct_classifications / all_classifications
+    obtained_accuracy = ctf.calculate_sensibility(all_data)
+    assert obtained_accuracy == expected_accuracy
