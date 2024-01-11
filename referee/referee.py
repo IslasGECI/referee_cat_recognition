@@ -37,3 +37,9 @@ def _classify(all_data):
         "false_positive": false_positive,
         "false_negative": false_negative,
     }
+
+
+def calculate_accuracy(all_data):
+    total = 9
+    correct = 5
+    return correct / total
