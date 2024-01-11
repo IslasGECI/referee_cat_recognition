@@ -30,6 +30,14 @@ def calculate_sensibility(all_data):
     return expected_sensibility
 
 
+def calculate_specificity(all_data):
+    binary_classification = _classify(all_data)
+    number_of_true_positives = len(binary_classification["true_positive"])
+    number_of_with_cat = len(all_data["with_cat"])
+    expected_sensibility = number_of_true_positives / number_of_with_cat
+    return expected_sensibility
+
+
 def _calculate_all_classifications(all_data):
     binary_classification = _classify(all_data)
     return len(
