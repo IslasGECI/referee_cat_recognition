@@ -5,6 +5,7 @@ all: check coverage mutants
 		check \
 		clean \
 		coverage \
+		evaluate_classifier \
 		format \
 		init \
 		install \
@@ -44,6 +45,9 @@ clean:
 coverage: setup
 	pytest --cov=${module} --cov-report=xml --verbose && \
 	coverage report --show-missing
+
+evaluate_classifier:
+	echo "Hello world"
 
 format:
 	black --line-length 100 ${module}
@@ -86,4 +90,3 @@ refactor: format
 	&& (git add ${module}/*.py tests/*.py && git commit -m "♻️  Refactor") \
 	|| git restore ${module}/*.py tests/*.py
 	chmod g+w -R .
-
