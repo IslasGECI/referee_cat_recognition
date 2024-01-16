@@ -1,4 +1,4 @@
-import referee as ctf
+import geci_referee as ctf
 
 with_cat = {"a", "b", "c", "d"}
 without_cat = {"e", "f", "g", "h", "i"}
