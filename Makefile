@@ -14,7 +14,7 @@ all: check coverage mutants
 		setup \
 		tests
 
-module = referee
+module = geci_referee
 codecov_token = 6c56bccb-1758-4ed9-8161-97c845591c26
 
 define lint
