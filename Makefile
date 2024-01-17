@@ -47,6 +47,7 @@ coverage: setup
 	coverage report --show-missing
 
 evaluate_classifier:
+	python src/evaluate_classifier.py
 	@echo "Predicted positive:"
 	ls /workdir/cat_detected
 	@echo "All photos:"

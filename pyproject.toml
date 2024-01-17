@@ -10,5 +10,6 @@ description-file = "README.md"
 home-page = "https://github.com/IslasGECI/referee_cat_recognition"
 module = "geci_referee"
 requires = [
+    "pandas"
 ]
 requires-python=">=3.9"
