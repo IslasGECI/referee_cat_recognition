@@ -47,7 +47,10 @@ coverage: setup
 	coverage report --show-missing
 
 evaluate_classifier:
-	echo "Hello world"
+	echo "Predicted Positive:"
+	ls /workdir/cat_detected
+	echo "All photos:"
+	ls /workdir/camera_trap_photos
 
 format:
 	black --line-length 100 ${module}
