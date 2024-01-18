@@ -15,4 +15,11 @@ all_data = {
     "without_cat": without_cat,
 }
 accuracy = ctf.calculate_accuracy(all_data)
-print(f"Accuracy: {accuracy*100}%")
+print(f"Accuracy: {round(accuracy*100)}%")
+sensitivity = ctf.calculate_sensitivity(all_data)
+print(f"Sensitivity: {round(sensitivity*100)}%")
+specificity = ctf.calculate_specificity(all_data)
+print(f"Specificity: {round(specificity*100)}%")
+balanced_accuracy = ctf.calculate_balanced_accuracy(all_data)
+print(f"Balanced accuracy: {round(balanced_accuracy*100)}%")
+

@@ -47,15 +47,13 @@ coverage: setup
 	coverage report --show-missing
 
 evaluate_classifier:
-	python src/evaluate_classifier.py
+	@echo
+	@echo "================================"
+	@python src/evaluate_classifier.py
+	@echo "================================"
+	@echo
 	@echo "Predicted positive:"
 	ls /workdir/cat_detected
-	@echo "All photos:"
-	ls /workdir/camera_trap_photos
-	@echo "True positive:"
-	grep ",1" /workdir/data/all_photos.csv
-	@echo "True negative:"
-	grep ",0" /workdir/data/all_photos.csv
 
 format:
 	black --line-length 100 ${module}
