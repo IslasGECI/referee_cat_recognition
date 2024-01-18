@@ -22,7 +22,7 @@ def calculate_accuracy(all_data):
     return correct_classifications / all_classifications
 
 
-def calculate_sensibility(all_data):
+def calculate_sensitivity(all_data):
     binary_classification = _classify(all_data)
     number_of_true_positives = len(binary_classification["true_positive"])
     number_of_with_cat = len(all_data["with_cat"])
@@ -38,8 +38,8 @@ def calculate_specificity(all_data):
 
 def calculate_balanced_accuracy(all_data):
     specificity = calculate_specificity(all_data)
-    sensibility = calculate_sensibility(all_data)
-    return (specificity + sensibility) / 2
+    sensitivity = calculate_sensitivity(all_data)
+    return (specificity + sensitivity) / 2
 
 
 def _calculate_all_classifications(all_data):

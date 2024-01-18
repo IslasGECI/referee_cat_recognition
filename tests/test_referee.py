@@ -46,10 +46,10 @@ def test_accuracy():
     assert obtained_accuracy == expected_accuracy
 
 
-def test_sensibility():
-    expected_sensibility = 0.5
-    obtained_sensibility = ctf.calculate_sensibility(all_data)
-    assert obtained_sensibility == expected_sensibility
+def test_sensitivity():
+    expected_sensitivity = 0.5
+    obtained_sensitivity = ctf.calculate_sensitivity(all_data)
+    assert obtained_sensitivity == expected_sensitivity
 
 
 def test_specificity():
