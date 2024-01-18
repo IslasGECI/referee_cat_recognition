@@ -36,7 +36,7 @@ def calculate_specificity(all_data):
     return number_of_true_negatives / number_of_without_cat
 
 
-def calculate_average_true_rate(all_data):
+def calculate_balanced_accuracy(all_data):
     specificity = calculate_specificity(all_data)
     sensibility = calculate_sensibility(all_data)
     return (specificity + sensibility) / 2

@@ -60,5 +60,5 @@ def test_specificity():
 
 def test_average_true_rate():
     expected_average_true_rate = 0.55
-    obtained_average_true_rate = ctf.calculate_average_true_rate(all_data)
+    obtained_average_true_rate = ctf.calculate_balanced_accuracy(all_data)
     assert obtained_average_true_rate == expected_average_true_rate
