@@ -52,8 +52,6 @@ evaluate_classifier:
 	@python src/evaluate_classifier.py
 	@echo "================================"
 	@echo
-	@echo "Predicted positive:"
-	ls /workdir/cat_detected
 
 format:
 	black --line-length 100 ${module}
